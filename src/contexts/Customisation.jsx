@@ -91,8 +91,8 @@ export const CameraModes ={
 
 export const CustomisationProvider = (props)=>{
     const [cushionColor, setCushionColor] = useState(cushionColors[4].color);
-    const [bodyColor, setBodyColor] = useState(bodyColors[4].color);
-    const [threadColor, setThreadColor] = useState(threadColors[4].color);
+    const [bodyColor, setBodyColor] = useState(bodyColors[1].color);
+    const [threadColor, setThreadColor] = useState(threadColors[0].color);
     const [embedText,setEmbedText]=useState("Gaming");
     const [cameraMode,setCameraMode] = useState(CameraModes.FREE);
     const [intro,setIntro] = useState(true);
