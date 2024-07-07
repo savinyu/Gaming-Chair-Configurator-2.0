@@ -1,0 +1,12 @@
+@import '/src/styles/cofigurator.scss';
+.App {
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height:100vh; 
+    position: fixed;
+    overflow: hidden;
+}
+canvas {
+    touch-action: none;
+}
