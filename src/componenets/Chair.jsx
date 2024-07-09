@@ -11,18 +11,24 @@ import { Text, useGLTF } from '@react-three/drei'
 import { useCustomisation } from '../contexts/Customisation';
 
 const MyText = ({threadColor, text}) => {
+  const embed = truncateText(text,7);
   return (
     <Text
+      font='/MonumentExtended-Ultrabold.woff'
       fontSize={1}
       rotation={[-Math.PI / 2, 0, 0]}
       scale={0.7}
       color={threadColor}
-      position={[1.3, 0, 0]}
+      position={[1.2, 0, 0]}
       textAlign='centre'
     >
-      {text}
+      {embed}
     </Text>
   );
+};
+
+const truncateText = (text, maxLength) => {
+  return text.length > maxLength ? text.substring(0, maxLength) : text;
 };
 
 export function Chair(props) {
