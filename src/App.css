@@ -1,4 +1,8 @@
 @import '/src/styles/cofigurator.scss';
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 .App {
     top: 0;
     left: 0;
@@ -6,7 +10,16 @@
     height:100vh; 
     position: fixed;
     overflow: hidden;
+    z-index: 0;
 }
 canvas {
     touch-action: none;
+    z-index: 0;
 }
+@font-face {
+    font-family: 'LogoFont';
+    src: url('/MonumentExtended-Ultrabold.woff') format('woff');
+    font-weight: 1000;
+    font-style: normal;
+}
+ 

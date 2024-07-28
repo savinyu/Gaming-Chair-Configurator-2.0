@@ -4,81 +4,81 @@ const CustomisationContext = createContext({});
 
 export const cushionColors = [
     {
-        color:"#683434",
-        name:"Brown"
+        name:"Black",
+        color:"#222222"
     },
     {
-        color:"#013220",
-        name:"Green"
+        name:"Blue",
+        color:"#24249c"
     },
     {
-        color:"#24249c",
-        name:"Blue"
+        name:"Brown",
+        color:"#683434"
     },
     {
-        color:"#adacac",
-        name:"Grey"
+        name:"Silver",
+        color:"#808080"
     },
     {
-        color:"#222222",
-        name:"Black"
+        name:"Green",
+        color:"#013220"
     },
     {
-        color:"#808080",
-        name:"Silver"
+        name:"White",
+        color:"#ffffff"
     }
 ];
 
 export const bodyColors = [
     {
-        color:"#683434",
-        name:"Brown"
+        name:"Black",
+        color:"#222222"
     },
     {
-        color:"#013220",
-        name:"Green"
+        name:"Blue",
+        color:"#24249c"
     },
     {
-        color:"#24249c",
-        name:"Blue"
+        name:"Brown",
+        color:"#683434"
     },
     {
-        color:"#adacac",
-        name:"Grey"
+        name:"Silver",
+        color:"#808080"
     },
     {
-        color:"#222222",
-        name:"Black"
+        name:"Green",
+        color:"#013220"
     },
     {
-        color:"#808080",
-        name:"Silver"
+        name:"White",
+        color:"#ffffff"
     }
 ];
 export const threadColors = [
     {
-        color:"#683434",
-        name:"Brown"
+        name:"Black",
+        color:"#222222"
     },
     {
-        color:"#013220",
-        name:"Green"
+        name:"Blue",
+        color:"#24249c"
     },
     {
-        color:"#24249c",
-        name:"Blue"
+        name:"Brown",
+        color:"#683434"
     },
     {
-        color:"#adacac",
-        name:"Grey"
+        name:"Silver",
+        color:"#808080"
     },
     {
-        color:"#222222",
-        name:"Black"
+        name:"Green",
+        color:"#013220"
     },
     {
-        color:"#808080",
-        name:"Silver"
+        name:"White",
+        color:"#ffffff"
     }
 ];
 
@@ -90,10 +90,10 @@ export const CameraModes ={
 }
 
 export const CustomisationProvider = (props)=>{
-    const [cushionColor, setCushionColor] = useState(cushionColors[4].color);
-    const [bodyColor, setBodyColor] = useState(bodyColors[1].color);
-    const [threadColor, setThreadColor] = useState(threadColors[0].color);
-    const [embedText,setEmbedText]=useState("Gaming");
+    const [cushionColor, setCushionColor] = useState(cushionColors[0].color);
+    const [bodyColor, setBodyColor] = useState(bodyColors[2].color);
+    const [threadColor, setThreadColor] = useState(threadColors[5].color);
+    const [embedText,setEmbedText]=useState("");
     const [cameraMode,setCameraMode] = useState(CameraModes.FREE);
     const [intro,setIntro] = useState(true);
 

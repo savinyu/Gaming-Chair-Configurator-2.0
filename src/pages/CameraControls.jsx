@@ -6,16 +6,16 @@ import { useRef} from "react"
 
 const cameraPositions = {
     [CameraModes.Top]:{
-        position: new THREE.Vector3(0,4,2),
-        target: new THREE.Vector3(0,3,0)
+        position: new THREE.Vector3(-4,4,2),
+        target: new THREE.Vector3(-5,3,0)
     },
     [CameraModes.Middle]:{
-        position: new THREE.Vector3(0,2,4),
-        target: new THREE.Vector3(0,1,0)
+        position: new THREE.Vector3(-2.5,2,5),
+        target: new THREE.Vector3(-4,1,0)
     },
     [CameraModes.Back]:{
         position: new THREE.Vector3(0,0,9),
-        target: new THREE.Vector3(0,0,0)
+        target: new THREE.Vector3(-3,0,0)
     }
 }
 export default function CameraControls(){
@@ -29,7 +29,6 @@ export default function CameraControls(){
 
         state.camera.position.lerp(cameraPositions[cameraMode].position, 2 * delta);
         orbitControls.current.target.lerp(cameraPositions[cameraMode].target, 2 * delta);
-        
     })
     return(
         <>
@@ -38,6 +37,7 @@ export default function CameraControls(){
                 onStart={()=>{
                     setCameraMode(CameraModes.FREE)
                 }}
+                target={[-3,0,0]}
                 makeDefault
                 enabled={true}
                 enableDamping={true}

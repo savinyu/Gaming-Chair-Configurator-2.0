@@ -1,18 +1,19 @@
-import {Canvas} from '@react-three/fiber'
+import {Canvas, useLoader} from '@react-three/fiber'
 import { ContactShadows,
   Environment, 
   Lightformer, 
   PresentationControls,
  } from '@react-three/drei'
-import { Suspense } from 'react'
 import {Perf} from 'r3f-perf'
-import Experience from './componenets/Experience'
-import Scene from './componenets/Configurator'
-import { CustomisationProvider, useCustomisation } from './contexts/Customisation'
-import CameraControls from './componenets/CameraControls'
+import Experience from './pages/Experience'
+import { CustomisationProvider } from './contexts/Customisation'
+import CameraControls from './pages/CameraControls'
 import './App.css'
+import { TextureLoader } from 'three'
+import Configurator from './pages/Configurator'
 
 function App() {
+  const texture = useLoader(TextureLoader,'/bg.png');
   return (
     <CustomisationProvider>
       <div className="App">
@@ -25,7 +26,8 @@ function App() {
           }} 
         > 
           {/* Background  */}
-          <color attach="background" args={['#222222']} /> {/* #171716 */}
+          <color attach="background" args={['#F5F5F5']}  /> 
+          <primitive attach="background" object={texture} />
 
           {/* Performance Usage  */}
           {/* <Perf position="bottom-left" /> */}
@@ -52,16 +54,17 @@ function App() {
 
           {/* Shadows  */}
           <ContactShadows 
+                  position-x={0}
                   position-y={-4}
-                  scale={8}
+                  scale={20}
                   opacity={1}
                   blur={2.4}   
-              />
+        />
 
         </Canvas>
 
         {/* Configurator  */}
-        <Scene/>
+        <Configurator/>
         
         
         
