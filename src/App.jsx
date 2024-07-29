@@ -31,7 +31,7 @@ function App() {
           <primitive attach="background" object={texture} />
 
           {/* Performance Usage  */}
-          <Perf position="bottom-left" />
+          {/* <Perf position="bottom-left" /> */}
 
           {/* Lighting */}
           <ambientLight intensity={1}/>
