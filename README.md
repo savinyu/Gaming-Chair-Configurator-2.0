@@ -1,9 +1,3 @@
-# React + Vite
+## Boat-Configurator V2.0
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-# Boat-Configurator
+<img width="1277" alt="image" src="https://github.com/user-attachments/assets/d40a7911-b716-4136-a9d2-4e7126ab1a77">
