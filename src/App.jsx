@@ -1,22 +1,23 @@
-import {Canvas, useLoader} from '@react-three/fiber'
-import { ContactShadows,
+import {Canvas,
+  useLoader} from '@react-three/fiber'
+import { AccumulativeShadows, ContactShadows,
   Environment, 
-  Lightformer, 
-  PresentationControls,
+  Lightformer,
  } from '@react-three/drei'
 import {Perf} from 'r3f-perf'
 import Experience from './pages/Experience'
 import { CustomisationProvider } from './contexts/Customisation'
 import CameraControls from './pages/CameraControls'
-import './App.css'
 import { TextureLoader } from 'three'
 import Configurator from './pages/Configurator'
+import './App.css'
+
 
 function App() {
   const texture = useLoader(TextureLoader,'/bg.png');
   return (
     <CustomisationProvider>
-      <div className="App">
+      <div className="App" >
         <Canvas 
           camera={{
             fov:60,
@@ -24,13 +25,13 @@ function App() {
             near:0.1,
             far:100
           }} 
-        > 
+        >   
           {/* Background  */}
           <color attach="background" args={['#F5F5F5']}  /> 
           <primitive attach="background" object={texture} />
 
           {/* Performance Usage  */}
-          {/* <Perf position="bottom-left" /> */}
+          <Perf position="bottom-left" />
 
           {/* Lighting */}
           <ambientLight intensity={1}/>
@@ -40,35 +41,26 @@ function App() {
           </Environment>
           <CameraControls/>
 
-          <PresentationControls
-            enabled={false}
-            global={true}
-            cursor={true}
-            config={ { mass: 2, tension: 400 } }
-            snap={ { mass: 3, tension: 400 } }
-          >
           {/* Main Model  */}
           <Experience/>
 
-          </PresentationControls>
-
           {/* Shadows  */}
           <ContactShadows 
-                  position-x={0}
-                  position-y={-4}
-                  scale={20}
-                  opacity={1}
-                  blur={2.4}   
-        />
-
+            position-x={0}
+            position-y={-4}
+            scale={10}
+            opacity={1}
+            blur={2.4}   
+          />
         </Canvas>
-
-        {/* Configurator  */}
-        <Configurator/>
-        
-        
-        
       </div>
+      {/* Configurator  */}
+      <Configurator/>
+
+      <Canvas style={{width:'20vw',height:'100vh',float:'right'}}>
+        <color attach="background" args={['#ffffff']} />
+        <primitive attach="background" object={texture} />
+      </Canvas>
     </CustomisationProvider>
   )
 }

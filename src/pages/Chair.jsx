@@ -35,7 +35,7 @@ export function Chair(props) {
   const { nodes, materials } = useGLTF('/gaming_chair/scene.gltf');
   const {bodyColor, cushionColor, threadColor, embedText} = useCustomisation();
   return (
-    <group position={[-0.5,0,0]} rotation={[0,Math.PI/6,0]} {...props} dispose={null}>
+    <group {...props} dispose={null}>
       <group position={[0, 0.526, 0.045]} scale={[0.154, 0.202, 0.255]}>
         {/* Base Cushion   */}
         <mesh

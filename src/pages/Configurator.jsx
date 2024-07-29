@@ -12,7 +12,7 @@ const Configurator = () => {
   return (
     <>
     <Topbar/>
-    <div className="flex flex-col justify-center absolute h-[800px] w-[440px] top-28 right-20 z-10 bg-white rounded-xl border border-grayBorder overflow-scroll ">
+    <div className="flex flex-col justify-center absolute h-[810px] w-[440px] top-24 right-20 z-10 bg-white rounded-xl border border-grayBorder overflow-scroll select-none">
       <div className="h-full mx-6 ">
         <div className=" bg-head-green w-36 bg-opacity-15 rounded-3xl px-3.5 py-1 mt-[32px] ">
           <div className=" font-space-grotesk text-head-green font-bold z-10">

@@ -3,10 +3,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: 'LogoFont';
+    src: url('/MonumentExtended-Ultrabold.woff') format('woff');
+    font-weight: 1000;
+    font-style: normal;
+}
 .App {
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 80vw;
     height:100vh; 
     position: fixed;
     overflow: hidden;
@@ -15,11 +22,5 @@
 canvas {
     touch-action: none;
     z-index: 0;
-}
-@font-face {
-    font-family: 'LogoFont';
-    src: url('/MonumentExtended-Ultrabold.woff') format('woff');
-    font-weight: 1000;
-    font-style: normal;
 }
  

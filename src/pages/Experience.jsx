@@ -11,7 +11,7 @@ export default function Experience(){
                 rotationIntensity={0}
                 speed={1.5}
             >
-            <mesh scale={7} position-y={-4} position-x={-2} >
+            <mesh scale={7} position={[0,-4,0]} >
                 <Chair/>
             </mesh>
             </Float>

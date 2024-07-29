@@ -1,24 +1,26 @@
-import { OrbitControls } from "@react-three/drei"
+import { CameraControls, OrbitControls } from "@react-three/drei"
 import { useFrame } from "@react-three/fiber"
 import * as THREE from "three"
 import { CameraModes, useCustomisation } from "../contexts/Customisation"
 import { useRef} from "react"
 
+
+
 const cameraPositions = {
     [CameraModes.Top]:{
-        position: new THREE.Vector3(-4,4,2),
-        target: new THREE.Vector3(-5,3,0)
+        position: new THREE.Vector3(0,4,2),
+        target: new THREE.Vector3(0,3,0)
     },
     [CameraModes.Middle]:{
-        position: new THREE.Vector3(-2.5,2,5),
-        target: new THREE.Vector3(-4,1,0)
+        position: new THREE.Vector3(0,2,5),
+        target: new THREE.Vector3(0,1,0)
     },
     [CameraModes.Back]:{
         position: new THREE.Vector3(0,0,9),
-        target: new THREE.Vector3(-3,0,0)
+        target: new THREE.Vector3(0,0,0)
     }
 }
-export default function CameraControls(){
+export default function CameraComponent(){
     const { cameraMode, setCameraMode} = useCustomisation();
     const orbitControls = useRef();
     
@@ -37,7 +39,6 @@ export default function CameraControls(){
                 onStart={()=>{
                     setCameraMode(CameraModes.FREE)
                 }}
-                target={[-3,0,0]}
                 makeDefault
                 enabled={true}
                 enableDamping={true}
